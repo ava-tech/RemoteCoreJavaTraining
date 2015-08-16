@@ -4,7 +4,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to Avalanche Information Technology !!!");
+		System.out.println("Welcome to Avalanche Information Technology, Inc. !!!");
 
 	}
 
