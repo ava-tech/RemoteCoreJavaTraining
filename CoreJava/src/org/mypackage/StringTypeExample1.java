@@ -13,8 +13,6 @@ public class StringTypeExample1 {
 		String s = "This is a test";
         String s1 = "\nThis is the second line";
         
-        //System.out.println(s+s1);
-        
         System.out.print(s+s1);
 
 	}
