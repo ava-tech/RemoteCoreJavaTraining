@@ -3,6 +3,8 @@ package org.mypackage;
 import java.util.Scanner;
 
 public class DecisionStmt {
+	
+	final static int ZERO = 0; 
 
 	static Scanner s = new Scanner(System.in);
 
@@ -14,7 +16,7 @@ public class DecisionStmt {
 		System.out.print("Computer Score: ");
 		int computerScore = s.nextInt();
 
-		if (yourScore != 0 && computerScore != 0) {
+		if (yourScore != ZERO && computerScore != ZERO) {
 
 			if (yourScore == computerScore) {
 				System.out.println("Game Tie ...");
