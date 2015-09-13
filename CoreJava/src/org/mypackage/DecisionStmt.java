@@ -3,39 +3,63 @@ package org.mypackage;
 import java.util.Scanner;
 
 public class DecisionStmt {
-	
-	final static int ZERO = 0; 
+
+	final static int ZERO = 0;
+	static String answer;
 
 	static Scanner s = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		System.out.print("Your Score: ");
-		int yourScore = s.nextInt();
+		System.out.println("Game of X-Factor ");
+		System.out.print("Are we ready to begin: (Y/N): ");
+		answer = s.next();
 
-		System.out.print("Computer Score: ");
-		int computerScore = s.nextInt();
+		while (answer.equalsIgnoreCase("Y")) {
 
-		if (yourScore != ZERO && computerScore != ZERO) {
+			System.out.print("\nYour Score: ");
+			int yourScore = s.nextInt();
 
-			if (yourScore == computerScore) {
-				System.out.println("Game Tie ...");
+			System.out.print("\nComputer Score: ");
+			int computerScore = s.nextInt();
+
+			if (yourScore != ZERO || computerScore != ZERO) {
+
+				if (yourScore == computerScore) {
+					System.out.println("Game Tie ...");
+					playAgain();
+				} else {
+
+					if (yourScore > computerScore) {
+						System.out.println("You Win ...");
+						playAgain();
+					}
+
+					if (yourScore < computerScore) {
+						System.out.println("You Lose ...");
+						playAgain();
+					}
+
+				}
+
 			} else {
-
-				if (yourScore > computerScore) {
-					System.out.println("You Win ...");
-				}
-
-				if (yourScore < computerScore) {
-					System.out.println("You Lose ...");
-				}
-
+				System.out.println("Let's begin the game ...");
+				gameStart();
 			}
 
-		} else {
-			System.out.println("Let's begin the game ...");
 		}
 
+		System.out.println("*** GAME OVER ***");
+
+	}
+
+	private static void gameStart() {
+		answer = "Y|y";
+	}
+
+	private static void playAgain() {
+		System.out.print("Do want to play again: (Y/N): ");
+		answer = s.next();
 	}
 
 }
