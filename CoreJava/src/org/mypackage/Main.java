@@ -1,5 +1,7 @@
 package org.mypackage;
 
+import org.mypackage.EnumExample.Day;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -33,5 +35,7 @@ public class Main {
 		System.out.println("Bob's Gift Card name: " + bob.name + " balance: " + bob.balance);
 		System.out.println("Alice's Gift Card name: " + alice.name + " balance: " + alice.balance);
 		
+		EnumExample s = new EnumExample(Day.SUNDAY);
+		s.getDayInAWeek();
 	}
 }

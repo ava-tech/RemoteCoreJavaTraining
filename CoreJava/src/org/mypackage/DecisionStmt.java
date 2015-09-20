@@ -20,23 +20,33 @@ public class DecisionStmt {
 			System.out.print("\nYour Score: ");
 			int yourScore = s.nextInt();
 
-			System.out.print("\nComputer Score: ");
-			int computerScore = s.nextInt();
+			if (yourScore > 100) {
+				System.out.println("You are out.");
+				System.exit(0);
+			}
+
+			// System.out.print("\nComputer Score: ");
+			int computerScore = (int) (Math.random() * 101);// s.nextInt();
 
 			if (yourScore != ZERO || computerScore != ZERO) {
 
 				if (yourScore == computerScore) {
-					System.out.println("Game Tie ...");
+					System.out.println("Game Tie ..." + ", Your Score: "
+							+ yourScore + ", Computer Score: " + computerScore);
 					playAgain();
 				} else {
 
 					if (yourScore > computerScore) {
-						System.out.println("You Win ...");
+						System.out.println("You Win ..." + ", Your Score: "
+								+ yourScore + ", Computer Score: "
+								+ computerScore);
 						playAgain();
 					}
 
 					if (yourScore < computerScore) {
-						System.out.println("You Lose ...");
+						System.out.println("You Lose ..." + ", Your Score: "
+								+ yourScore + ", Computer Score: "
+								+ computerScore);
 						playAgain();
 					}
 
