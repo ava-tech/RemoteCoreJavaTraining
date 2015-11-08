@@ -1,4 +1,4 @@
-package org.oct312015;
+package org.nov.labs;
 
 public class Rectangle extends Shape {
 
